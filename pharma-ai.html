@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHARMA AI</title>
+    <style>
+
+        .logo {
+            font-size: 38px;
+            font-weight: bold;
+            color: rgb(255, 255, 255);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: rgb(41, 40, 47, 0.5);
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px 100px;
+            height: 59px;
+            margin: 0 auto;
+            text-align: left;
+        }
+        .questions {
+            position: fixed;
+            top: 25px;
+            left: 58%;
+            margin-top: 10px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 18px;
+            color: rgb(255, 255, 255);
+            min-width: fit-content;
+            text-decoration: none;
+        }
+        .about-us {
+            position: fixed;
+            top: 25px;
+            right: 10px;
+            left: 71%;
+            margin-top: 10px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 18px;
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+        }
+
+        .questions-for-ai {
+            position: fixed;
+            top: 25px;
+            right: 10px;
+            left: 83%;
+            margin-top: 10px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 18px;
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+        }
+
+        .welcome {
+            text-align: center;
+            font-size: 27px;
+            margin-top: 200px;
+            color: rgb(255, 255, 255);
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            background-color: rgba(102, 114, 231, 0.5);
+            padding: 10px 20px; 
+            border-radius: 10px;
+            display: inline-block; 
+            margin-left: 355px;
+        }
+
+        .logoimg {
+            position: fixed;
+            width: 120px;
+            transform: translate(-10%, -15%);
+
+        }
+
+        .welcome-section {
+            text-align: center;
+            font-size: 20px;
+            margin-top: 200px;
+            color: rgb(255, 255, 255);
+        }
+        .welcome-section::after {
+            content: "";
+            background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(welcomeimg.jpg);
+            background-size: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            z-index: -1;
+        }
+        .down {
+            margin-top: 2000px;
+        }
+        #typing-text {
+            position: relative;
+            color: rgb(0, 0, 0);
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 30px;
+            margin: 50px auto;
+            width: 80%;
+            text-align: center;
+            border-bottom: 1px solid #000000;
+            padding-bottom: 10px;
+            left: 40%;
+            transform: translateX(-50%);
+            top: -2000px;
+            background-color: rgb(255, 255, 255);
+            padding: 10px;
+            border-radius: 10px;
+            z-index: -1;
+        }
+
+        #chat-container {
+            width: 500px;
+            height: 600px;
+            border: 1px solid #ccc;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            overflow-y: auto;
+            padding: 20px;
+            margin: -1815px auto 50px;
+        }
+        #chat-container p {
+            margin: 0;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        #chat-container p:nth-child(odd) {
+            background-color: #f1f1f1;
+        }
+        #chat-container p:nth-child(even) {
+            background-color: #e1e1f1;
+        }
+        #input-container {
+            width: 500px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: -2px; 
+            padding-bottom: 20px; 
+        }
+        #user-input {
+            width: 400px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        #send-button {
+            padding: 10px 20px;
+            background-color: #030379;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #send-button:hover {
+            background-color: #0505a0;
+        }
+
+        .seperation-1 {
+            text-align: center;
+        }
+
+        .the-journey {
+            font-family: Circular-Pro, Helvetica, Arial, sans-serif;
+            font-weight: 700;
+            line-height: 1.25;
+            letter-spacing: normal;
+            margin-left: 130px;
+            margin-top: 100px;
+            font-size: 40px;
+            
+        }
+
+        .store-img {
+            width: 689px;
+            height: 400px;
+            transform: translate(714px, 1%);
+            left: 2px;
+            filter: brightness(0.7);
+        }
+
+        .paragraph-journey {
+            max-width: 593px; 
+            padding: 20px;
+            border: 1px solid #ffffff;
+            margin: 20px auto;
+            background-color: #d5d5d8;
+            border-radius: 10px;
+            overflow: hidden; 
+            word-wrap: break-word; 
+            font-family: Circular-Pro, Helvetica, Arial, sans-serif;
+            font-weight: 300;
+            line-height: 1.5;
+            transform: translate(-56%, -26rem);
+        }
+
+    </style>
+</head>
+<body>
+    <p class="logo">{ PHARMA AI }</p>
+    <nav>
+        <a class="about-us" href="about-us.html" target="_self" title="About Us">ABOUT US</a>
+        <a class="questions" href="questions.html" target="_self" title="Questions">QUESTIONS</a>
+        <a class="questions-for-ai" href="questions-ai.html" target="_self" title="Questions For AI">QUESTIONS FOR AI</a>
+    </nav>
+    <img src="logoimg-removebg-preview.png" alt="Logo Pharma AI" class="logoimg">
+    <div class="welcome">
+        <h1>Welcome to Pharma AI</h1>
+    </div>
+    <div class="welcome-section"></div>
+    <h2 class="down">_____________________________________________________________________________________________________________________</h2>
+    <div id="typing-text"></div>
+
+    
+    <div id="chat-container">
+        <p>Welcome to the AI Chatbot!</p>
+    </div>
+    <div id="input-container">
+        <input type="text" id="user-input" placeholder="Type your message...">
+        <button id="send-button" onclick="sendMessage()">Send</button>
+    </div>
+
+    <script src="script.js"></script>
+    <h4 class="seperation-1">______________________________________________________________________________________________________________________________</h4>
+    <h2 class="the-journey"> The Journey. </h2>
+    <img class="store-img" src="storeimg.png" alt="img">
+    <h2 class="paragraph-journey">Pharma AI started off as an idea and developed into a website programmed and ran by HTML, CSS, and Javascript. 
+                                  I remember the idea came to me that in todays world there is a lot of people that don't know much about their wellnesss and health. 
+                                  The main goal of Pharma AI was to combat this issue by making an AI Chatbot available to answer common medical questions asked. 
+                                  The website would constantly be changed improving in design and the users experience.</h2>
+</body>
+</html>

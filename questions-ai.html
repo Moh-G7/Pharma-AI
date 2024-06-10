@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questions For AI</title>
+</head>
+<style>
+
+    .questions-div {
+        background-color: rgb(102, 133, 219, 0.8);
+        width: 100%;
+        height: 59px;
+        margin: 0 auto;
+        position: fixed;
+        top: 0;
+        left: 0;
+        padding: 18px 100px;
+        height: 59px;
+        text-align: left;
+        font-size: 38px;
+        font-weight: bold;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .questions-text {
+        position: fixed;
+        margin: 0 auto;
+        margin-left: 0%;
+        font-size: 38px;
+        height: 59px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: white;
+    }
+
+    .home-link {
+        position: fixed;
+        top: 25px;
+        right: 10px;
+        left: 57%;
+        margin-top: 9px;
+        font-weight: 400;
+        font-size: 22px;
+        color: black;
+        min-width: fit-content;
+        text-decoration: none;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .questions-link {
+        position: fixed;
+        top: 25px;
+        right: 10px;
+        left: 68%;
+        margin-top: 9px;
+        font-weight: 400;
+        font-size: 22px;
+        color: black;
+        min-width: fit-content;
+        text-decoration: none;
+        font-family: 'Poppins', sans-serif;
+
+    }
+
+    .about-link {
+        position: fixed;
+        top: 25px;
+        right: 10px;
+        left: 84%;
+        margin-top: 9px;
+        font-weight: 400;
+        font-size: 22px;
+        color: black;
+        min-width: fit-content;
+        text-decoration: none;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .medical-q {
+        position: relative;
+        top: 170px;
+        left: 50px;
+        background-color: #f4f5a6;
+        padding: 7px;
+        border-radius: 10px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 30px;
+        z-index: -1;
+        display: inline;
+    }
+
+    .medical-a1 {
+        position: relative;
+        top: 217px;
+        left: 88px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: 20px;
+        z-index: -1;
+    }
+
+    .medical-a2 {
+        position: relative;
+        top: 247px;
+        left: 88px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: 20px;
+        z-index: -1;
+    }
+
+    .medical-a3 {
+        position: relative;
+        top: 277px;
+        left: 88px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: 20px;
+        z-index: -1;
+    }
+
+    .medical-a4 {
+        position: relative;
+        top: 307px;
+        left: 88px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: 20px;
+        z-index: -1;
+    }
+
+    .medical-a5 {
+        position: relative;
+        top: 337px;
+        left: 88px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: 20px;
+        z-index: -1;
+    }
+
+    .medical-a6 {
+        position: relative;
+        top: 367px;
+        left: 88px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: 20px;
+        z-index: -1;
+    }
+
+    .medical-a7 {
+        position: relative;
+        top: 397px;
+        left: 88px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: 20px;
+        z-index: -1;
+    }
+
+    .medical-a8 {
+        position: relative;
+        top: 427px;
+        left: 88px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: 20px;
+        z-index: -1;
+    }
+
+    .medical-a9 {
+        position: relative;
+        top: 457px;
+        left: 88px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: 20px;
+        z-index: -1;
+    }
+
+    .seperation-m1 {
+        position: relative;
+        top: 480px;
+        left: 20px;
+    }
+
+    .pharmaceutical-q {
+        position: relative;
+        top: 503px;
+        left: 50px;
+        background-color: #f4f5a6;
+        padding: 7px;
+        border-radius: 10px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 30px;
+        z-index: -1;
+        display: inline;
+    }
+
+    .pharmaceutical-a1 {
+        position: relative;
+        top: 550px;
+        left: 88px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: 20px;
+        z-index: -1;
+    }
+
+    .pharmaceutical-a2 {
+        position: relative;
+        top: 580px;
+        left: 88px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: 20px;
+        z-index: -1;
+    }
+
+    .pharmaceutical-a3 {
+        position: relative;
+        top: 610px;
+        left: 88px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: 20px;
+        z-index: -1;
+    }
+
+    .pharmaceutical-a4 {
+        position: relative;
+        top: 640px;
+        left: 88px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: 20px;
+        z-index: -1;
+    }
+
+    .pharmaceutical-a5 {
+        position: relative;
+        top: 670px;
+        left: 88px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: 20px;
+        z-index: -1;
+    }
+
+    .pharmaceutical-a6 {
+        position: relative;
+        top: 700px;
+        left: 88px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: 20px;
+        z-index: -1;
+    }
+
+    .pharmaceutical-a7 {
+        position: relative;
+        top: 730px;
+        left: 88px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: 20px;
+        z-index: -1;
+    }
+
+    .pharmaceutical-a8 {
+        position: relative;
+        top: 760px;
+        left: 88px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: 20px;
+        z-index: -1;
+    }
+
+    .pharmaceutical-a9 {
+        position: relative;
+        top: 790px;
+        left: 88px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: 20px;
+        z-index: -1;
+    }
+
+    .seperation-p1 {
+        position: relative;
+        top: 813px;
+        left: 20px;
+    }
+
+    .all-q {
+        position: relative;
+        top: 836px;
+        left: 50px;
+        background-color: #f4f5a6;
+        padding: 7px;
+        border-radius: 10px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 30px;
+        z-index: -1;
+        display: inline;
+
+    }
+
+    .response {
+        position: relative;
+        top: 883px;
+        left: 88px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: 20px;
+        z-index: -1;
+        margin-bottom: 30px;
+    }
+
+    .down-222 {
+        position: relative;
+        top: 920px;
+    }
+
+
+</style>
+
+<body>
+
+    <div class="questions-div">
+        <h2 class="questions-text">Questions For AI</h2>
+    </div>
+
+    <nav>
+        <a class="home-link" href="http://127.0.0.1:5500/pharma-ai.html" target="_self" title="Home">
+            HOME
+        </a>
+        <a class="questions-link" href="questions.html" target="_self" title="Questions">QUESTIONS</a>
+        <a class="about-link" href="about-us.html" target="_self" title="About Us">ABOUT US</a>
+    </nav>
+
+    <h1 class="medical-q">Medical Questions To Ask The AI</h1>
+    <h2 class="medical-a1">1. What are antibiotics?</h2>
+    <h2 class="medical-a2">2. What is ibuprofen used for?</h2>
+    <h2 class="medical-a3">3. Can I take medication with food?</h2>
+    <h2 class="medical-a4">4. What are side effects?</h2>
+    <h2 class="medical-a5">5. What is metformin used for?</h2>
+    <h2 class="medical-a6">6. What is the purpose of lisinopril?</h2>
+    <h2 class="medical-a7">7. What does atorvastatin do?</h2>
+    <h2 class="medical-a8">8. What are the side effects of aspirin?</h2>
+    <h2 class="medical-a9">9. Can I take ibuprofen and acetaminophen together?</h2>
+    <h4 class="seperation-m1">____________________________________________________________________________________________________________________________________________________________________________</h4>
+    <h1 class="pharmaceutical-q">Pharmaceutical Questions To Ask The AI</h1>
+    <h2 class="pharmaceutical-a1">1. What do pharmacies do?</h2>
+    <h2 class="pharmaceutical-a2">2. What services do pharmacies offer?</h2>
+    <h2 class="pharmaceutical-a3">3. How can I find a pharmacy near me?</h2>
+    <h2 class="pharmaceutical-a4">4. What are the roles of a pharmacist?</h2>
+    <h2 class="pharmaceutical-a5">5. What should I ask my pharmacist?</h2>
+    <h2 class="pharmaceutical-a6">6. Can pharmacists prescribe medications?</h2>
+    <h2 class="pharmaceutical-a7">7. What is a compounding pharmacy?</h2>
+    <h2 class="pharmaceutical-a8">8. How do I transfer my prescription to a different pharmacy?</h2>
+    <h2 class="pharmaceutical-a9">9. Can pharmacies provide health screenings?</h2>
+    <h4 class="seperation-p1">____________________________________________________________________________________________________________________________________________________________________________</h4>
+    <h1 class="all-q">All Questions To Ask The AI</h1>
+    <h2 class="response">1. Hello</h2>
+    <h2 class="response">2. How are you?</h2>
+    <h2 class="response">3. What are antibiotics?</h2>
+    <h2 class="response">4. What are pharmacies?</h2>
+    <h2 class="response">5. What is ibuprofen used for?</h2>
+    <h2 class="response">6. Can I take medication with food?</h2>
+    <h2 class="response">7. What are vaccines?</h2>
+    <h2 class="response">8. What is diabetes?</h2>
+    <h2 class="response">9. How to treat a cold?</h2>
+    <h2 class="response">10. What is hypertension?</h2>
+    <h2 class="response">11. What are allergies?</h2>
+    <h2 class="response">12. What is asthma?</h2>
+    <h2 class="response">13. What are side effects?</h2>
+    <h2 class="response">14. What is a virus?</h2>
+    <h2 class="response">15. How to prevent flu?</h2>
+    <h2 class="response">16. What is cancer?</h2>
+    <h2 class="response">17. How to treat a headache?</h2>
+    <h2 class="response">18. What is anemia?</h2>
+    <h2 class="response">19. How to manage stress?</h2>
+    <h2 class="response">20. What is cholesterol?</h2>
+    <h2 class="response">21. What is a stroke?</h2>
+    <h2 class="response">22. What is heart disease?</h2>
+    <h2 class="response">23. How to quit smoking?</h2>
+    <h2 class="response">24. What is arthritis?</h2>
+    <h2 class="response">25. How to lose weight?</h2>
+    <h2 class="response">26. What is depression?</h2>
+    <h2 class="response">27. What is anxiety?</h2>
+    <h2 class="response">28. How to improve sleep?</h2>
+    <h2 class="response">29. What is dehydration?</h2>
+    <h2 class="response">30. How to treat a burn?</h2>
+    <h2 class="response">31. What is metformin used for?</h2>
+    <h2 class="response">32. What is the purpose of lisinopril?</h2>
+    <h2 class="response">33. What does atorvastatin do?</h2>
+    <h2 class="response">34. What are the side effects of aspirin?</h2>
+    <h2 class="response">35. Can I take ibuprofen and acetaminophen together?</h2>
+    <h2 class="response">36. What do pharmacies do?</h2>
+    <h2 class="response">37. What services do pharmacies offer?</h2>
+    <h2 class="response">38. How can I find a pharmacy near me?</h2>
+    <h2 class="response">39. What are the roles of a pharmacist?</h2>
+    <h2 class="response">40. What should I ask my pharmacist?</h2>
+    <h2 class="response">41. Can pharmacists prescribe medications?</h2>
+    <h2 class="response">42. What is a compounding pharmacy?</h2>
+    <h2 class="response">43. How do I transfer my prescription to a different pharmacy?</h2>
+    <h2 class="response">44. Can pharmacies provide health screenings?</h2>
+    <h2 class="response">45. How do I dispose of old or unused medications?</h2>
+
+
+    
+    
+    <h1 class="down-222">________________________________________________________________________________________</h1>
+</body>
+
+</html>

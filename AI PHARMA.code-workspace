@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"name": "AI PHARMA",
+			"path": "."
+		},
+		{
+			"path": "../AI-CODE"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "AI PHARMA"
+	}
+}
